@@ -9,6 +9,7 @@ class home_model extends model {
 		$exemple[] = 'poney3000';
 		$exemple[] = 'patrick';
 		$exemple[] = 'exemple';
+		$exemple[] = 'Atchoum';
 
 		return $exemple;
 	}

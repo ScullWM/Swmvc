@@ -3,8 +3,7 @@
 
 class Controllers{
 
-	public $data = array();
-
+    public $data = array();
 
     function loadmodel($name){
         require_once('model/'.$name.'.php');
