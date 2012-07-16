@@ -1,6 +1,5 @@
 <?php 
 
-
 class Controllers{
 
     public $data = array();
