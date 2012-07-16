@@ -8,7 +8,7 @@
 ini_set('error_reporting', E_ALL);
 
 require('model/core.php');
-require('controllers/core.php');
+require('controller/core.php');
 
 // here we include all our external class
 // ask it if you need it
@@ -20,7 +20,7 @@ include("views/header.tmpl"); // header is simply include there
 
 if (isset($_GET['c'])) {
     
-    $controller_file = 'controllers/'.$_GET['c'].'.php';
+    $controller_file = 'controller/'.$_GET['c'].'.php';
 
     if(file_exists($controller_file)){
         require_once $controller_file;  
