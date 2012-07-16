@@ -14,9 +14,9 @@ class Controllers{
         $this->data = array_merge($this->data, $data);
     }
         
-	function render($filename){            
-		extract($this->data);
-		require('views/'.get_class($this).'/'.$filename.'.tmpl');
-	}
+    function render($filename){            
+        extract($this->data);
+        require('views/'.get_class($this).'/'.$filename.'.tmpl');
+    }
 
 }

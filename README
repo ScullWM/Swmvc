@@ -3,3 +3,6 @@ SWMVC
 Just a practice exercice to obtain a simple, easy and evolutive mvc framework.
 
 Keep it simple!
+
+Use URL like this ?c=home&a=listing&id=1
+

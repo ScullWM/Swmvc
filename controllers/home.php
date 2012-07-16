@@ -1,26 +1,22 @@
 <?php
 
-
 class home extends Controllers{
 
-	function index(){  
+    function index(){  
         $this->render('default');
-		return true;
-	}
+        return true;
+    }
 
-
-	function listing(){
+    function listing(){
         $var = $this->loadmodel('home');
         $data['d'] = $this->home_model->listing();
         $this->set($data);
-        $this->render('listing');;
-	}	
+        $this->render('listing');
+    }
 
-
-	function view(){
-
-		$view_file = 'template.php';
-		return $view_file;
-	}
+    function view(){
+        $view_file = 'template.php';
+        return $view_file;
+    }
 
 }
