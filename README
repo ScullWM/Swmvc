@@ -1,8 +1,21 @@
-SWMVC
-
-Just a practice exercice to obtain a simple, easy and evolutive mvc framework.
-
-Keep it simple!
+SWM php MVC "Framework"
+=========
 
 Use URL like this ?c=home&a=listing&id=1
+It provides a simple MVC structure:
 
+- /?c=xxxxx Include controller class
+- /?a=xxxxx Call the $a action in the previous controller called
+- /?id=xx   Here you get the id you need to manipulate for show or editing
+- Add external class by simply add them the lib folder (files must be ".class.php" ending)
+
+Motivation
+----------
+Just a practice exercice to obtain a simple, easy and evolutive mvc framework.
+
+Todo
+----------
+- Corrige name of controller & model name (plural or not!)
+- Use namespace to respect coding standards
+
+Keep it simple!
