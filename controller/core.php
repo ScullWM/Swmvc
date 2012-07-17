@@ -1,6 +1,8 @@
 <?php 
 
-class CoreController {
+namespace swmvc\Controller\Core;
+
+abstract class CoreController {
 
     public $data = array();
 

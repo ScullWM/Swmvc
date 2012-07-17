@@ -1,6 +1,8 @@
 <?php
 
-class home_model extends model {
+namespace swmvc\Model\Home;
+
+class home_model extends CoreModel {
 
     public function listing(){
         $exemple = array();

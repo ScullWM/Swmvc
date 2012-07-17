@@ -5,16 +5,17 @@
  *
  */
 
-ini_set('error_reporting', E_ALL);
+//ini_set('error_reporting', E_ALL);
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 
 require('model/core.php');
 require('controller/core.php');
 
-// here we include all our external class
-// ask it if you need it
-foreach(glob("lib/*.class.php") as $f):
-    require_once $f;
-endforeach;
+function LoadClasse($Classe){
+    require 'lib/'.strtolower($Classe).'.class.php';
+}
+spl_autoload_register ('LoadClasse');
 
 include("views/header.tmpl"); // header is simply include there
 

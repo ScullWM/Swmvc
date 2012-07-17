@@ -1,6 +1,8 @@
 <?php
 
-class model{
+namespace swmvc\Model\Core;
+
+abstract class CoreModel{
 
       
 }

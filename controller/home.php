@@ -1,5 +1,7 @@
 <?php
 
+namespace swmvc\Controller\Home;
+
 class home extends CoreController {
 
     function index(){  
