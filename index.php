@@ -17,8 +17,6 @@ function LoadClasse($Classe){
 }
 spl_autoload_register ('LoadClasse');
 
-include("views/header.tmpl"); // header is simply include there
-
 if (isset($_GET['c'])) {
     
     $controller_file = 'controller/'.$_GET['c'].'.php';
@@ -48,5 +46,3 @@ if (isset($_GET['c'])) {
 } else {
     require_once 'views/default.tmpl'; // else show homepage default
 }
-
-include("views/footer.tmpl"); // and there go the footer

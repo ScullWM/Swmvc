@@ -1,6 +1,6 @@
 <?php
 
-namespace swmvc\Controller\Home;
+//namespace swmvc\Controller\Home;
 
 class home extends CoreController {
 

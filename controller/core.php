@@ -1,6 +1,6 @@
 <?php 
 
-namespace swmvc\Controller\Core;
+//namespace swmvc\Controller\Core;
 
 abstract class CoreController {
 
@@ -15,7 +15,11 @@ abstract class CoreController {
     function render($filename, $data=null){   
         $this->data = array_merge($this->data, $data);
         extract($this->data);
+        ob_start();
         require('views/'.get_class($this).'/'.$filename.'.tmpl');
+        $content = ob_get_contents();
+        ob_end_clean();
+        require('views/layout.tmpl');
     }
 
 }

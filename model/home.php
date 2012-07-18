@@ -1,6 +1,6 @@
 <?php
 
-namespace swmvc\Model\Home;
+//namespace swmvc\Model\Home;
 
 class home_model extends CoreModel {
 
