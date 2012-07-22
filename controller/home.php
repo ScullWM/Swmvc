@@ -9,9 +9,15 @@ class home extends CoreController {
     }
 
     function listing(){
+    	global $app;
         $var = $this->loadmodel('home');
         $data['d'] = $this->home_model->listing();
-        $this->render('listing', $data);
+        $app->template->render('listing', $data);
+        //echo get_class($app->template);
+
+        /*echo'<pre>';
+        print_r(get_declared_classes());
+        echo'</pre>';*/
     }
 
 }

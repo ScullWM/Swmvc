@@ -4,7 +4,17 @@
 
 abstract class CoreController {
 
-    public $data = array();
+    private $data = array();
+    private $parameters = array();
+    public $template;
+
+    public function __set($key, $value){
+        $this->parameters[$key] = $value;
+    }
+
+    public function __get($key){
+        return $this->parameters[$key];
+    }
 
     function loadmodel($name){
         require_once('model/'.$name.'.php');
@@ -12,14 +22,6 @@ abstract class CoreController {
         $this->$modelname = new $modelname();
     }
         
-    function render($filename, $data=null){   
-        $this->data = array_merge($this->data, $data);
-        extract($this->data);
-        ob_start();
-        require('views/'.get_class($this).'/'.$filename.'.tmpl');
-        $content = ob_get_contents();
-        ob_end_clean();
-        require('views/layout.tmpl');
-    }
+
 
 }
