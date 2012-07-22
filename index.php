@@ -24,7 +24,3 @@
     $app = New Swmvc();
 
     $app->run();
-
-    echo'<pre>';
-
-    //print_r($GLOBALS);
