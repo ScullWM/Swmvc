@@ -8,6 +8,13 @@ class home extends CoreController {
         $this->render('default');
     }
 
+    public function meta($param){
+        $meta["test"] = array('title'=>'exemple de balise title','description'=>'ma description','keyword'=>'test, test, description');
+        $meta["autre"] = array('title'=>'exemple de balise title','description'=>'ma description','keyword'=>'test, test, description');
+        $meta["kikoo"] = array('title'=>'exemple de balise title','description'=>'ma description','keyword'=>'test, test, description');
+        return $meta[$param];
+    }
+
     function listing(){
     	global $app;
         $var = $this->loadmodel('home');
